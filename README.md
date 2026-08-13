@@ -17,8 +17,9 @@ https://silvioalbqrq.github.io/50-Segmentos/
 ```
 50-Segmentos/
 ├── index.html          # Página principal com lista de setores
-├── css/style.css       # Estilos (tema escuro)
+├── css/style.css       # Estilos (tema escuro) + regras de seleção
 ├── js/
+│   ├── protect.js      # Proteção contra cópia de código (DevTools, view-source etc.)
 │   ├── setores.js      # Dados dos 50+ setores
 │   └── app.js          # Filtros e busca
 ├── setores/            # Páginas individuais de cada setor
@@ -26,6 +27,37 @@ https://silvioalbqrq.github.io/50-Segmentos/
 │   ├── setor-02.html
 │   └── ...
 └── README.md
+```
+
+## 🔒 Proteção de código
+
+O arquivo `js/protect.js` dificulta:
+
+- Clique direito (menu de contexto)
+- Atalhos F12 / Ctrl+Shift+I / Ctrl+U / Ctrl+S
+- Arrastar imagens e links
+- Análise via console (limpeza periódica)
+
+**O conteúdo textual visível continua selecionável e copiável** (parágrafos, tabelas, títulos dos setores).  
+A proteção é de dissuasão — não é à prova de usuários avançados.
+
+## 🛠️ Como publicar no GitHub Pages
+
+1. Crie o repositório `50-Segmentos` (ou use o existente `silvioalbqrq/50-Segmentos`).
+2. Faça upload / push dos arquivos.
+3. Vá em **Settings → Pages**.
+4. **Source**: branch `main` (ou `master`) + pasta `/ (root)`.
+5. Salve. Em alguns minutos o site estará no ar.
+
+### Via terminal
+
+```bash
+git clone https://github.com/silvioalbqrq/50-Segmentos.git
+cd 50-Segmentos
+# copie os arquivos atualizados
+git add .
+git commit -m "Proteção de código + conteúdo copiável"
+git push origin main
 ```
 
 ## 📋 Setores incluídos
