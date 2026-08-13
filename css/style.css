@@ -26,6 +26,38 @@ body {
   min-height: 100vh;
 }
 
+/* Proteção: impede seleção em elementos de interface, mas permite no conteúdo textual */
+.header,
+.nav,
+.logo,
+.filter-btn,
+.sector-number,
+.tag,
+.back-link,
+.footer {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Conteúdo visível permanece copiável */
+.intro-content,
+.content-block,
+.detail-header h1,
+.detail-header .tagline,
+.sector-card h3,
+.sector-card p,
+.hero h1,
+.hero .subtitle,
+table,
+.highlight {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
 a {
   color: var(--accent);
   text-decoration: none;
